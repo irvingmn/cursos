@@ -1,0 +1,68 @@
+/* Grid con Mixins */
+//grid-system de 12 columnas
+//mixin que calcule el ancho en porsentajes segun el numero de col
+
+
+//toma 12col por defecto------▼
+@mixin grid($cols, $cols-total:12){ 
+/* width: percentage($cols / 12); */
+  width: percentage($cols / $cols-total);
+}
+.cols-6{
+  @include grid(6,199);//segundo parametro es el nº de cols
+}
+
+
+/* Media Queries */
+
+@mixin mq($min-width:20em){
+  @media screen and (min-width:$min-width){
+    @content; /* poner mixin dentro de otro */
+  }
+}
+
+.caja{
+  background: red;
+  @include mq(40em){
+    background: goldenrod;
+  }
+  @include mq(60em){
+    background: green;
+  }
+  @include mq(80em){
+    background: violet;
+  }
+}
+/*.box{ // device-width:480 MAL XXXXX
+  color: #ff0000;
+  @media secreen and(max-width:500px){
+    color: green;
+  }
+}*/
+
+@mixin radio($w, $h){
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 50%;
+  padding-bottom: percentage($h / $w );
+
+  background: cadetblue;
+  width: 100%;
+  /*^^^Truco de css para calcula la altura respecto al ancho del elemento con %padding  */
+}
+
+.video-box{
+  @include radio(16,8);
+  position: relative;
+  iframe,
+  video,
+  object{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+
