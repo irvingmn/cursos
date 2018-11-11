@@ -193,4 +193,34 @@ div .webd:nth-child(2) {
     position: absolute;
     width: 100%;
     height: 100%; }
+
+/* Funciones */
+.rgb {
+  background-color: magenta; }
+
+.box {
+  width: calc(100%-10%); }
+
+.data {
+  value: "no-repeat";
+  background-repeat: no-repeat; }
+  .data::before {
+    content: "12px"; }
+
+.porcentaje {
+  width: 1000%;
+  width: 20%;
+  width: 60%; }
+
+.redondeo {
+  width: 2; }
+
+.unit {
+  width: "em"; }
+
+.unit {
+  width: false; }
+
+.unit2 {
+  width: 30em; }
 /*# sourceMappingURL=estilos.css.map */

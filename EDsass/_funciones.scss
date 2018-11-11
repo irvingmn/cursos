@@ -1,0 +1,63 @@
+/* Funciones */
+
+//las funciones en css devuelven valores"tipos de datos " de los calculos que hacemos con ellas (no tienen selectores como los mixins) 
+
+//CSS Funciones
+  //RGB()
+  $color:rgb(255,0,255);
+  .rgb{background-color: $color;}
+  //calc
+  .box{width: calc(100%-10%);}
+  //sacle(x,y)
+  //rotate()
+  //translate(x,y)
+  //linear-gradient()
+  //radial-gradient()
+  //attr()
+
+//Funciones nativas de Sass
+  //unquote() quote()
+  $string1:'no-';
+  $string2:repeat;
+  $string3:$string1 +$string2;
+  $fontsize:12px;
+
+  .data{
+    value:$string3;
+    background-repeat: unquote($string3);//quita comillas
+    &::before{
+      content: quote($fontsize);//pone comillas
+    }
+  }
+
+  //percentage() 
+  .porcentaje{ // 1 = 100% 
+    width:percentage(10);
+    width:percentage(0.2);
+    width:percentage(3/5);
+  }
+
+  //round()
+  .redondeo{ //redonde los numeros
+    width: round(9/5);
+  }
+
+  //nth($list, $index=numero)
+  //map-get($map,$key)
+
+  //type-of()
+
+  //unit()
+  $unit:20em;
+  .unit{
+    width: unit($unit);
+  }
+
+  //unitless() true si no hay unidady false si hay una unidad
+  .unit{ 
+    width: unitless($unit);
+  }
+  $unit2:25em + 5; //toma la unidad em y suma el numero sin 
+  .unit2{
+    width: $unit2;
+  }
