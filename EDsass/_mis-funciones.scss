@@ -1,0 +1,65 @@
+/* Hacer Funciones propias*/
+@function suma($a,$b){
+  @return $a+$b;
+}
+.suma{
+  width: suma(10em,5 )
+}
+
+//Funcion de px a em ($element es la unidad final y $conexto es lo que mide el padre), 
+@function em($element,$contexto:16px){ 
+  $em: ($element/$contexto) * 1em; 
+  @return $em; 
+}
+
+p{
+  font-size: em(8px); 
+}
+div{
+  $fz:24px;
+  font-size: $fz;
+  p{
+  font-size: em(7px,$fz);
+  } 
+}
+
+
+//Funcion image path (Buscar la ruta de imagenes) 
+ @function imgpath($img){
+  $path:'../../../dist/assets/img/';// podria estar en archivo de config donde declaramos variables
+  @return url($path +$img);
+ }
+
+ div{
+   background-image: imgpath('bg.jpg');
+ }
+
+ //Multiple box shadow
+@function sombra-inf($valor,$color){
+  $box-sh: 1px 1px #{$color};// valor inicial de box-shadow
+  @for $i from 2 through $valor{
+    $box-sh: '#{$box-sh}, #{$i}px #{$i}px #{$color}';
+    //iteramos con el for 1px..  1px..  y el color
+  }
+  @return unquote($box-sh);
+}
+
+
+.sombra{
+  width: 100px;
+  height: 100px;
+  background: darken(red,10);
+  box-shadow: sombra-inf(50,red);
+}
+//conevertir numero con unidad a solo numero
+@function no-unit($number){
+  @if no unitless($number){
+    $unit:$number * 0 + 1;
+    $no-unit:$number /$unit;
+    @return $no-unit;
+  }
+}
+
+.no-unit{
+  line-height:no-unit(40392px);
+}
