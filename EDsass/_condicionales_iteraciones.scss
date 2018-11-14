@@ -1,0 +1,39 @@
+/* Condicionales */
+@mixin grid($child, $number){
+  display:flex;
+  flex-wrap: wrap;
+
+  @if $child==li{
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+
+  #{$child}, .#{$child}{
+    width: (100% / $number);
+  }
+}
+.grid{
+  @include grid(li,4);
+}
+
+@mixin columnas($col, $max-cols:12){
+  @if $col <= $max-cols{
+    width: percentage($col/ $max-cols);
+  }
+  @else{
+    @at-root{
+      body{
+        padding-top: 2em; 
+        &::before{
+          content:'El parametro $col no puede ser mayor a $max-cols';
+        }
+      }
+    }
+  }
+}
+
+.column-3{
+  @include columnas(14);
+}

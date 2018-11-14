@@ -248,4 +248,23 @@ div {
 
 .no-unit {
   line-height: 40392; }
+
+/* Condicionales */
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none; }
+  .grid li, .grid .li {
+    width: 25%; }
+
+body {
+  padding-top: 2em; }
+  body::before {
+    content: 'El parametro $col no puede ser mayor a $max-cols'; }
 /*# sourceMappingURL=estilos.css.map */
