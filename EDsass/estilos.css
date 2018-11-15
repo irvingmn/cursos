@@ -268,6 +268,7 @@ body {
   body::before {
     content: 'El parametro $col no puede ser mayor a $max-cols'; }
 
+/* For */
 .item-1 {
   width: 10%; }
 
@@ -308,5 +309,39 @@ body {
   background-color: magenta; }
 
 .button.tomato {
+  background-color: tomato; }
+
+/* Each */
+.button.yellow {
+  background-color: yellow; }
+
+.button.blue {
+  background-color: blue; }
+
+.button.green {
+  background-color: green; }
+
+.button.tomato {
+  background-color: tomato; }
+
+.icon.facebook {
+  background-color: blue; }
+
+.icon.twitter {
+  background-color: lightblue; }
+
+.icon.youtube {
+  background-color: red; }
+
+.while.yellow {
+  background-color: yellow; }
+
+.while.blue {
+  background-color: blue; }
+
+.while.green {
+  background-color: green; }
+
+.while.tomato {
   background-color: tomato; }
 /*# sourceMappingURL=estilos.css.map */

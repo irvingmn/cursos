@@ -1,0 +1,40 @@
+/* Each */
+  //para listas
+  //@each $item in$ list{
+    //tu codigo
+  //}
+  $colors: yellow, blue, green, tomato;
+
+  @each $color in $colors{
+    .button.#{$color}{
+      background-color: $color;
+    }
+  }
+
+  //Eache para mapas
+  //@each $key, $value in $map{
+    //tu codigo
+  //}
+
+  $networks:( 
+    facebook:blue,
+    twitter: lightblue,
+    youtube:red
+  );//mapa que es "key(fb):value(blue)"
+
+  @each $social, $color in $networks{
+    .icon.#{$social}{
+      background-color: $color
+    }
+  }
+ 
+
+  $i: 1;
+  $colores: yellow, blue, green, tomato;
+  @while $i <= length($colores){
+    $item-actual:nth($colores,$i);
+    .while.#{$item-actual}{
+      background-color: $item-actual;
+    }
+    $i: $i+1;
+  }

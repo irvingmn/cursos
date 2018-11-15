@@ -39,7 +39,7 @@
 }
 
 
-//For
+/* For */
 @for $i from 1 through 10{  //codigo que se repite hasta el numero end
  .item-#{$i}{
     width:percentage($i/10); //imprime porsentaje de item 10% -100%
