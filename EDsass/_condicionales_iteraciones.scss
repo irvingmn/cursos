@@ -1,4 +1,5 @@
 /* Condicionales */
+//if
 @mixin grid($child, $number){
   display:flex;
   flex-wrap: wrap;
@@ -33,7 +34,25 @@
     }
   }
 }
-
 .column-3{
   @include columnas(14);
 }
+
+
+//For
+@for $i from 1 through 10{  //codigo que se repite hasta el numero end
+ .item-#{$i}{
+    width:percentage($i/10); //imprime porsentaje de item 10% -100%
+  }
+}
+
+$list: blue,orange,magenta, tomato;
+@for $i from 1 through length($list){// length recorre la lista 
+  $current: nth($list, $i);//recupero elemento de lista($list) y la posicion del elemento($i)
+  .button.#{$current}{
+    background-color: $current;
+  }
+}
+
+
+

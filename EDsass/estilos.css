@@ -267,4 +267,46 @@ body {
   padding-top: 2em; }
   body::before {
     content: 'El parametro $col no puede ser mayor a $max-cols'; }
+
+.item-1 {
+  width: 10%; }
+
+.item-2 {
+  width: 20%; }
+
+.item-3 {
+  width: 30%; }
+
+.item-4 {
+  width: 40%; }
+
+.item-5 {
+  width: 50%; }
+
+.item-6 {
+  width: 60%; }
+
+.item-7 {
+  width: 70%; }
+
+.item-8 {
+  width: 80%; }
+
+.item-9 {
+  width: 90%; }
+
+.item-10 {
+  width: 100%; }
+
+.button.blue {
+  background-color: blue; }
+
+.button.orange {
+  background-color: orange; }
+
+.button.magenta {
+  background-color: magenta; }
+
+.button.tomato {
+  background-color: tomato; }
 /*# sourceMappingURL=estilos.css.map */
