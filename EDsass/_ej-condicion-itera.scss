@@ -1,0 +1,56 @@
+/* ejemploa condicionales */
+  //Listas anidadas
+$networks:(facebook,blue,10px),
+          (twitter, lightblue,5px),
+          (instagram,coral,4px);
+
+@each $social in $networks{
+  $selector: nth($social,1); //lista e indice
+  .#{$selector}{
+    background-color: nth($social,2);
+    margin: nth($social,3);
+  }
+}
+
+//funcion recuperar un valor dentro de listas anidadas
+@function sublist($list, $index, $subindex){
+  $sublist:nth($list,$index);
+  $value:nth($sublist,$subindex);
+  @return $value
+}
+.data{
+  value: sublist($networks,3 ,2 );
+}
+
+//recorrer mapa anidada
+$colors:(
+  blue:(
+    base:blue,
+    dark:darken(blue,10),
+    light:lighten(blue,10)
+  ),
+  red:(
+    base:red,
+    dark:darken(red,10),
+    light:lighten(red,10)
+  )
+);
+
+@function submap($map,$key,$subkey){
+  $submap:map-get($map, $key );
+  $value:map-get($submap, $subkey);
+  @return $value;
+}
+
+data{
+  value:submap($colors, red,light );
+}
+
+
+@each $color, $subcolors in $colors{
+  @each $type, $value in $subcolors{
+    .#{$color}-#{$type}{
+      background-color: $value;
+    }
+  }
+}

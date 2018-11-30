@@ -61,3 +61,23 @@
   .unit2{
     width: $unit2;
   }
+
+  //to-upper-case() Conviente string a mayusculas
+  //to-lower-case() Conviente string a minusculas
+
+  /*   Funciones numeros */
+  //round()
+  //persentage()
+  //flor() redonde hacia abajo
+  //ceil() redondea haci arriba
+  //max(numbers...)
+   
+  div{
+     width: max(1,2,3,4,5);
+     width: min(1,2,3,4,5);
+     width: random(28);
+   }
+  //min(numbers...)
+  //abs() //valos absoluto
+
+  //random([limite])

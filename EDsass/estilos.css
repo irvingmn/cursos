@@ -224,6 +224,12 @@ div .webd:nth-child(2) {
 .unit2 {
   width: 30em; }
 
+/*   Funciones numeros */
+div {
+  width: 5;
+  width: 1;
+  width: 21; }
+
 /* Hacer Funciones propias*/
 .suma {
   width: 15em; }
@@ -344,4 +350,41 @@ body {
 
 .while.tomato {
   background-color: tomato; }
+
+/* ejemploa condicionales */
+.facebook {
+  background-color: blue;
+  margin: 10px; }
+
+.twitter {
+  background-color: lightblue;
+  margin: 5px; }
+
+.instagram {
+  background-color: coral;
+  margin: 4px; }
+
+.data {
+  value: coral; }
+
+data {
+  value: #ff3333; }
+
+.blue-base {
+  background-color: blue; }
+
+.blue-dark {
+  background-color: #0000cc; }
+
+.blue-light {
+  background-color: #3333ff; }
+
+.red-base {
+  background-color: red; }
+
+.red-dark {
+  background-color: #cc0000; }
+
+.red-light {
+  background-color: #ff3333; }
 /*# sourceMappingURL=estilos.css.map */
