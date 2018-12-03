@@ -79,5 +79,16 @@
    }
   //min(numbers...)
   //abs() //valos absoluto
-
   //random([limite])
+
+
+  //listas 
+  //join($list1, $list2)-> concatenar listas (se puede especificar la coma o no con " comma|space ")
+
+  $list1:red green blue;
+  $list2:'a','b','c';
+
+  .list{
+    joins:join($list1,$list2);
+    joins:join($list2,$list1);
+  }

@@ -228,7 +228,11 @@ div .webd:nth-child(2) {
 div {
   width: 5;
   width: 1;
-  width: 21; }
+  width: 16; }
+
+.list {
+  joins: red green blue "a" "b" "c";
+  joins: "a", "b", "c", red, green, blue; }
 
 /* Hacer Funciones propias*/
 .suma {
