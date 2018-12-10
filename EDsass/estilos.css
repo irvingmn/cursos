@@ -228,7 +228,7 @@ div .webd:nth-child(2) {
 div {
   width: 5;
   width: 1;
-  width: 16; }
+  width: 13; }
 
 .list {
   joins: red green blue "a" "b" "c";
@@ -391,4 +391,33 @@ data {
 
 .red-light {
   background-color: #ff3333; }
+
+/* Maps 
+  map-get($map, $key)
+  map-keys($map);
+  map-value($map);
+  map-has-key($map, $key);
+  map-merge($map1,$map2)
+*/
+.map {
+  map-merge: (k1: v1, k2: v2, k-1: v-1, k-2: v-2);
+  map-keys: k1, k2, k-1, k-2;
+  map-values: v1, v2, v-1, v-2; }
+
+.box {
+  color: red; }
+  @media screen and (min-width: 64em) {
+    .box {
+      color: tomato; } }
+  @media screen and (min-width: 32.8125em) {
+    .box {
+      color: slateblue; } }
+
+/* selectores */
+.if {
+  width: 20px;
+  height: ud8659e72; }
+
+.else {
+  height: udafc1c59; }
 /*# sourceMappingURL=estilos.css.map */
