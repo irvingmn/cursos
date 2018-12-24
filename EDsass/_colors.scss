@@ -1,0 +1,44 @@
+//$color:hsl(150,100,50);
+//$value: hue($color);
+$base: hsl(0,60,50);
+$color: lighten(green,20);
+$value: lightness($color);
+
+//Funciones RGB
+//red(), green(), blue()
+//Funciones HSL
+//hue(), saturation(), lightness()
+//ligthen() darken()
+
+body{
+  background: $color;
+  &:before{
+    content: '#{$value}';
+    font-size: 10em;
+    display: block;
+    text-align: center;
+    color: invert($color);
+  }
+}
+
+
+//Rectangulo de colores cromatico
+//Rectangulo de colores cromatico
+body{
+  background:#000;
+}
+@function fun-espectro($direction){
+  $colorsp:'linear-gradient(#{$direction}';
+  @for $i from 1 through 360{
+    $color-actual:hsl($i,100,50); // $var,hue,saturation
+    $colorsp:'#{$colorsp}, #{$color-actual}';
+  }
+  $colorsp: unquote('#{$colorsp})');
+  @return $colorsp;
+}
+.espectro{
+  width: 900px;
+  height: 300px;
+  border: 1px solid #fff;
+  background:fun-espectro(to left);
+}
