@@ -228,7 +228,7 @@ div .webd:nth-child(2) {
 div {
   width: 5;
   width: 1;
-  width: 1; }
+  width: 15; }
 
 .list {
   joins: red green blue "a" "b" "c";
@@ -416,10 +416,10 @@ data {
 /* selectores */
 .if {
   width: 20px;
-  height: u24dd6c2a; }
+  height: uea9befc2; }
 
 .else {
-  height: ubb216e21; }
+  height: u958ad14c; }
 
 body {
   background: #00e600; }
