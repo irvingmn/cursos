@@ -1,0 +1,25 @@
+//- include template/template 
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Document
+  body
+    .main
+      img(src="img/logo.png").logo
+      form.login-form
+        .login-form__item
+          label(for="username").login-form__label Nombre del usuario
+          input(type="text" name="username" id="username")
+        .login-form__item
+          label(for="password").login-form__label Contraseña
+          input(type="password" name="password" id="password")
+        input(type="submit" value="Ingresar").login-form__submit.button
+      .reset-password
+        h3 ¿has olvidado tu contraseña?
+          a(href="") Recuperar
+      .main-form
+      .reset-pss
+  

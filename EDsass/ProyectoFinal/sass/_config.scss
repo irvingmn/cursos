@@ -3,13 +3,28 @@
 // fuente
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
 
+// convertir px a em
+@function em($el,$parent:16px){
+  @return($el/$parent)*1em;
+}
+  
 $font1: 'Poiret One', sans-serif;
-
-$fsize:14px;
-
+$fsize:em(14px); 
+$h3size:$fsize * 1.15;
+$h2size:$fsize * 1.35;
+$h1size:$fsize * 1.7;
 
 
 $colors:(
-
-
+ blue-base:#1A535C,
+ blue-mar:#4ECDC4,
+ white-base:#F7FFF7,
+ rojo: #FF6B6B,
+ rojo-claro:rgb(255, 133, 149),
+ gris-oscuro:rgb(80, 80, 80),
+ gris-claro:rgb(172, 172, 172) 
 );
+
+@function color($color){
+  @return map-get($colors, $color);
+}
