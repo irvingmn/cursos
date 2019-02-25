@@ -4,7 +4,7 @@ body{
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background: url(../img/descarga.png) center / cover ;
+  background: img('descarga.png') center / cover ; //funcion ruta de imagenes (_config.scss)
    
 }
 
@@ -35,13 +35,19 @@ body{
     padding-left: 1em;
     font-size: .9em;
   }
+  &__submit.cta{
+    display: table;
+    margin: 1em auto;
+  }
 } 
 
 .reset-password{
   text-align: center;
   color: rgb(41, 41, 41);
+  display: inline-block;
   a{
-    color: red;
+    color: color(rojo);
+    
   }
 
 }

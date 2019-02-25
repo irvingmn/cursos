@@ -2,6 +2,7 @@
 
 // fuente
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css');
 
 // convertir px a em
 @function em($el,$parent:16px){
@@ -9,7 +10,7 @@
 }
   
 $font1: 'Poiret One', sans-serif;
-$fsize:em(14px); 
+$fsize:em(18px); 
 $h3size:$fsize * 1.15;
 $h2size:$fsize * 1.35;
 $h1size:$fsize * 1.7;
@@ -22,9 +23,15 @@ $colors:(
  rojo: #FF6B6B,
  rojo-claro:rgb(255, 133, 149),
  gris-oscuro:rgb(80, 80, 80),
- gris-claro:rgb(172, 172, 172) 
+ gris-claro:rgb(172, 172, 172),
+ blanco:#fff
 );
 
 @function color($color){
   @return map-get($colors, $color);
+}
+
+//funcion para obtener imagenes rutas
+@function img($img){
+  @return url('../img/#{$img}');
 }
